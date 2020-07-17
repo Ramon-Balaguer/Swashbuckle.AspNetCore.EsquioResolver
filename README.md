@@ -3,7 +3,7 @@ Conflict solver in actions with features toggles using Esquio.
 
 When using feature toggles you will probably want to use the same endpoint / resource / verb depending on whether a feature toggles is enabled.
 
-```chsarp
+```csharp
 [HttpGet]
 [ActionName("Get")]
 public IEnumerable<Pokemon> Get()
@@ -42,7 +42,7 @@ dotnet add Swashbuckle.AspNetCore.EsquioResolver
 
 # How to use
 Add these commands in your project's startup.cs ConfigureServices method:
-```chsarp
+```csharp
 services.AddSwaggerGen(configuration =>
 {
 	configuration.ResolveConflictingActionsByFeatureToggles();
@@ -50,6 +50,6 @@ services.AddSwaggerGen(configuration =>
 ``` 
 
 And in your Configure method:
-```chsarp
-	app.UseResolveConflictingActionsByFeatureToggles();
+```csharp
+app.UseResolveConflictingActionsByFeatureToggles();
 ```
