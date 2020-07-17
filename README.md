@@ -1,5 +1,5 @@
 # Swashbuckle.AspNetCore.EsquioResolver
-Conflict solver in actions with feature toggles using Esquio.
+Conflict solver in actions with feature toggles using [Esquio](https://github.com/Xabaril/Esquio).
 
 When using feature toggles you will probably want to use the same endpoint / resource / verb depending on whether a feature toggle is enabled.
 
