@@ -24,7 +24,7 @@ jobs:
     - name: Publish NuGet
       uses: brandedoutcast/publish-nuget@v2.5.4
       with:
-        PROJECT_FILE_PATH: src\Swashbuckle.AspNetCore.EsquioResolver
+        PROJECT_FILE_PATH: src\Swashbuckle.AspNetCore.EsquioResolver\Swashbuckle.AspNetCore.EsquioResolver.csproj
         PACKAGE_NAME: 'Swashbuckle.AspNetCore.EsquioResolver'
         NUGET_KEY: ${{ secrets.NUGET_KEY }}
       
