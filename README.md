@@ -1,9 +1,9 @@
 # Swashbuckle.AspNetCore.EsquioResolver
-Conflict solver in actions with features toggles using Esquio.
+Conflict solver in actions with feature toggles using Esquio.
 
-When using feature toggles you will probably want to use the same endpoint / resource / verb depending on whether a feature toggles is enabled.
+When using feature toggles you will probably want to use the same endpoint / resource / verb depending on whether a feature toggle is enabled.
 
-```chsarp
+```csharp
 [HttpGet]
 [ActionName("Get")]
 public IEnumerable<Pokemon> Get()
@@ -20,7 +20,7 @@ public IEnumerable<PokemonSuper> GetNew()
 }
 ```
 
-The Swashbuckle documentation does not allow two endpoints / resource / verb to be called the same, because this solution is not supported by OpenApi 3.0.
+The Swashbuckle documentation does not allow two endpoints / resources / verbs to be named exactly the same, since this solution is not supported by OpenApi 3.0.
 
 The solution is to create a conflict solver.
 
@@ -42,7 +42,7 @@ dotnet add Swashbuckle.AspNetCore.EsquioResolver
 
 # How to use
 Add these commands in your project's startup.cs ConfigureServices method:
-```chsarp
+```csharp
 services.AddSwaggerGen(configuration =>
 {
 	configuration.ResolveConflictingActionsByFeatureToggles();
@@ -50,6 +50,6 @@ services.AddSwaggerGen(configuration =>
 ``` 
 
 And in your Configure method:
-```chsarp
-	app.UseResolveConflictingActionsByFeatureToggles();
+```csharp
+app.UseResolveConflictingActionsByFeatureToggles();
 ```
